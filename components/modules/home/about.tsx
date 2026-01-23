@@ -208,7 +208,7 @@ export default function About() {
                 {/* Progress & Future */}
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
                     {/* Research Progress */}
-                    <div className="col-span-1 lg:col-span-2 rounded-3xl bg-slate-50 dark:bg-slate-900/50 h-full p-8 shadow-md hover:shadow-lg">
+                    <div className="col-span-1 lg:col-span-2 rounded-3xl bg-slate-50 dark:bg-slate-900/50 h-full p-8 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
                         <div className="mb-6 flex items-center gap-3">
                             <i className="fas fa-microscope text-2xl text-emerald-600 dark:text-emerald-400"></i>
                             <h3 className="text-2xl font-bold text-slate-900 dark:text-white">研发进展速览</h3>
@@ -224,7 +224,7 @@ export default function About() {
                     </div>
 
                     {/* Future Work */}
-                    <div className="rounded-3xl bg-linear-to-br from-white to-emerald-50/50 p-8 shadow-md hover:shadow-lg">
+                    <div className="rounded-3xl bg-linear-to-br from-white to-emerald-50/50 p-8 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
                         <div className="mb-6 flex items-center gap-3">
                             <i className="fas fa-rocket text-2xl text-emerald-500"></i>
                             <h3 className="text-2xl font-bold">未来工作</h3>

@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "C³U Research Group",
-  description: "C³U Research Group Official Website",
+  title: "清洁燃烧与碳捕集利用研究团队 C³U Group",
+  description: "清洁燃烧与碳捕集利用研究团队 C³U Group",
 };
 
 export default function RootLayout({

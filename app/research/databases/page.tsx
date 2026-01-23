@@ -2,7 +2,7 @@ import React from "react";
 import DbClient from "./DbClient";
 
 export const metadata = {
-  title: "数据共享 | C³U Research Group",
+  title: "数据共享 | C³U 团队",
 };
 
 export default function Home() {
