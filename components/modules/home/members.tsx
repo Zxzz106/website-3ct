@@ -11,9 +11,11 @@ type Member = {
 	research_topic?: string;
 	email?: string;
 	extern_url?: string;
+	title?: string;
 	role?: string;
 	office?: string;
-	introduction?: string;
+	introduction?: string[];
+	year?: string;
 };
 
 export default function Members() {
@@ -69,6 +71,11 @@ export default function Members() {
 								<h4 className="text-sm font-bold text-gray-800 dark:text-gray-200 text-center group-hover/item:text-green-600 dark:group-hover/item:text-green-400 transition-colors">
 									{member.name}
 								</h4>
+								{member.year && (
+									<p className="text-[11px] leading-tight text-gray-500 dark:text-gray-400 text-center mt-1 px-2 line-clamp-2">
+										{member.year}
+									</p>
+								)}
 								{member.research_topic && (
 									<p className="text-[11px] leading-tight text-gray-500 dark:text-gray-400 text-center mt-1 px-2 line-clamp-2 italic">
 										{member.research_topic}
@@ -108,12 +115,19 @@ export default function Members() {
 					</div>
 					<h4 className="text-xl font-bold text-gray-900 dark:text-white text-center mb-1">
 						{member.name}
+						{member.title && (
+							<span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400">
+								&ensp;{member.title}
+							</span>
+						)}
 					</h4>
-					<p className="text-sm font-bold text-green-600 dark:text-green-400 text-center mb-4 tracking-widest uppercase">
-						{member.role}
-					</p>
 
-					<div className="flex flex-col items-center space-y-2.5 mb-2 w-full">
+					<span className="text-sm text-gray-500">
+						{member.role}
+					</span>
+					
+
+					<div className="flex flex-col items-center space-y-2.5 m-2 w-full">
 						<div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
 							<svg className="w-4 h-4 mr-2 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-10V4m0 10V4m-4 22h4" /></svg>
 							{member.office}
@@ -134,7 +148,9 @@ export default function Members() {
 					</div>
 
 					<p className="text-sm text-gray-600 dark:text-gray-400 text-center line-clamp-4 leading-relaxed italic border-t border-gray-100 dark:border-gray-700/50 pt-6">
-						&emsp;{member.introduction}
+						{ member.introduction && member.introduction.map((intro, index) => (
+							<span key={member.name+"_intro_"+index}>&emsp;&emsp;{intro}<br /></span>
+						))}
 					</p>
 				</div>
 			</button>
@@ -249,7 +265,7 @@ export default function Members() {
 							className="absolute -top-3 -right-3 text-sm text-white hover:text-amber-600 fas fa-close focus:outline-none"
 						/>
 						<Link
-							href={selectedTeacher.extern_url ? selectedTeacher.extern_url : ""}
+							href={selectedTeacher.extern_url ? selectedTeacher.extern_url : "/#members"}
 							target="_blank"
 							rel="noopener noreferrer"
 							className="block focus:outline-none"
@@ -270,11 +286,17 @@ export default function Members() {
 										<div>
 											<h4 className="text-2xl font-bold text-gray-900 dark:text-white m-2">
 												{selectedTeacher.name}
-											<span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400">
-												&emsp;{selectedTeacher.role}
-											</span>
+												{selectedTeacher.title && (
+													<span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400">
+														&emsp;{selectedTeacher.title}
+													</span>
+												)}
 											</h4>
 										</div>
+
+										<span className="text-sm text-gray-500">
+											{selectedTeacher.role}
+										</span>
 										<div className="space-y-2 text-sm text-gray-700 dark:text-gray-300 m-2">
 											{selectedTeacher.office && (
 												<div className="flex items-center gap-2 m-2">
@@ -301,7 +323,9 @@ export default function Members() {
 									<div className="p-8 flex flex-col gap-4 sm:border-l-2 border-gray-100 dark:border-gray-700">
 										{selectedTeacher.introduction && (
 											<p className="text-sm leading-relaxed text-gray-600">
-												&emsp; {selectedTeacher.introduction}
+												{ selectedTeacher.introduction && selectedTeacher.introduction.map((intro, index) => (
+													<span key={selectedTeacher.name+"_intro_"+index}>&emsp;&emsp;{intro}<br /></span>
+												))}
 											</p>
 										)}
 									</div>

@@ -138,20 +138,26 @@ export default function General() {
                     className="text-gray-900/90 text-center w-[30%] max-w-md min-w-60 pointer-events-auto right-0"
                 >
                     <Image
-                        src="/3CT_ico.png"
-                        alt="3CT logo"
+                        src="/C3U_ico.png"
+                        alt="C³U logo"
                         width={100}
                         height={100}
                         className="h-30 w-30 sm:h-40 sm:w-40 lg:h-50 lg:w-50 xl:h-60 xl:w-60 object-contain drop-shadow-md mb-8 mx-auto"
                         priority
                     />
                     <h2 className="text-md xs:text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold md:font-bold mb-2 tracking-wide text-center">
-                        <span className="inline-block">燃烧碳捕集技术</span>
-                        <span className="inline-block">课题组</span>
+                        <span className="inline-block">清洁燃烧与碳捕集利用</span>
+                        <span className="inline-block">团队</span>
                     </h2>
-                    <p className="text-xs xs:text-sm font-bold sm:text-base lg:text-md xl:text-lg leading-relaxed text-center">
-                        Combustion & CO₂ Capture <wbr />Technology
-                    </p>
+                    <div className="text-xs xs:text-sm font-bold sm:text-base lg:text-md xl:text-lg leading-relaxed text-center flex flex-col justify-center items-center gap-0.5">
+                        <span className="inline-block p-2">C<sup>3+</sup>U Research Group</span>
+                        <div className="text-xl text-left text-gray-800/80 dark:text-gray-200/80 leading-relaxed">
+                            <span className="" style={{fontFamily: "serif"}}><span className="font-bold text-green-500/80" style={{fontFamily: "sans-serif"}}>C</span>lean Combustion</span><br/>
+                            <span className="" style={{fontFamily: "serif"}}><span className="font-bold text-green-500/80" style={{fontFamily: "sans-serif"}}>C</span>O₂ Capture</span><br/>
+                            <span className="" style={{fontFamily: "serif"}}><span className="font-bold text-green-500/80" style={{fontFamily: "sans-serif"}}>C</span>O₂ <span className="font-bold text-indigo-500" style={{fontFamily: "sans-serif"}}>U</span>tilization</span><br/>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 

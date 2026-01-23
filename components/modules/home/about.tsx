@@ -143,7 +143,7 @@ export default function About() {
                         {/* Center Core */}
                         <div className="relative z-20 flex h-48 w-48 shrink-0 flex-col items-center justify-center rounded-full bg-linear-to-br from-emerald-500 to-teal-600 text-white shadow-2xl ring-8 ring-emerald-50 dark:ring-emerald-900/20">
                              <div className="relative z-10 flex flex-col items-center justify-center">
-                                <Image src="3CT_ico_white.png" alt="3CT Logo" width={65} height={65} className="mb-2 text-4xl opacity-80" />
+                                <Image src="C3U_ico_white.png" alt="C³U Logo" width={65} height={65} className="mb-2 text-4xl opacity-80" />
                                 <div className="text-xl font-bold">燃烧 + 新能源</div>
                              </div>
                         </div>

@@ -12,7 +12,6 @@ const NAV_ITEMS = [
   { id: "research", label: "学术经纬" },
   { id: "members", label: "团队成员" },
   { id: "contact", label: "联系我们" },
-  // { id: "links", label: "友情链接" },a
 ];
 
 const HEADER_OFFSET = 72; // px: approximate header height for offset calculations
@@ -88,6 +87,12 @@ export default function Header() {
   }, [sectionIds]);
 
   const handleNavClick = (event: MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    if (window.location.pathname !== "/") {
+      setIsOpen(false);
+      return; // Allow Link to navigate back to home with hash
+      
+    }
+
     event.preventDefault();
     const target = document.getElementById(targetId);
     if (target) {
@@ -102,7 +107,7 @@ export default function Header() {
       aria-label="Site header"
     >
       <Link href="/" className="mr-6 flex items-center">
-        <img src="/3ct_logo.png" alt="3CT Logo" className="h-10 w-auto" />
+        <img src="/C3U_logo.png" alt="C³U Logo" className="h-10 w-auto" />
         {/* <h2 className="text-xl font-semibold text-gray-900" title={HEADER_TEXT}>
           {HEADER_TEXT}
         </h2> */}
@@ -126,11 +131,11 @@ export default function Header() {
         <nav aria-label="Primary navigation" className="hidden md:block">
           <ul className="flex items-center gap-6">
             {NAV_ITEMS.map((item) => {
-              const isActive = activeId === item.id;
+              const isActive = activeId.startsWith(item.id);
               return (
                 <li key={item.id}>
                   <Link
-                    href={`#${item.id}`}
+                    href={`/#${item.id}`}
                     onClick={(event) => handleNavClick(event, item.id)}
                     aria-current={isActive ? "page" : undefined}
                     className={`text-sm font-medium transition-colors pb-1 ${
@@ -160,7 +165,7 @@ export default function Header() {
               return (
                 <li key={item.id}>
                   <Link
-                    href={`#${item.id}`}
+                    href={`/#${item.id}`}
                     onClick={(event) => handleNavClick(event, item.id)}
                     aria-current={isActive ? "page" : undefined}
                     className={`block px-6 py-3 text-sm font-medium transition-colors ${

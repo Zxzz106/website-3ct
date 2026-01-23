@@ -2,7 +2,7 @@ import React from "react";
 import HomeClient from "./HomeClient";
 
 export const metadata = {
-  title: "3CT 课题组",
+  title: "C³U 团队",
 };
 
 export default function Home() {

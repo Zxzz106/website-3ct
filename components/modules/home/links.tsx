@@ -26,7 +26,7 @@ export default function Links() {
                             >
                                 <div className="relative w-full flex items-center justify-center">
                                     <Image
-                                        src={`res/links_img/${link.logo}`}
+                                        src={`/res/links_img/${link.logo}`}
                                         alt={link.name}
                                         height={320}
                                         width={320}

@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "3CT 课题组",
-  description: "3CT 课题组",
+  title: "C³U Research Group",
+  description: "C³U Research Group Official Website",
 };
 
 export default function RootLayout({

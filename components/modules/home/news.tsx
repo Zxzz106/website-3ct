@@ -52,21 +52,21 @@ export default function News() {
                             {/* Image */}
                             <div className="relative w-full aspect-2/1 bg-gray-200 dark:bg-gray-700 overflow-hidden">
                                 <img
-                                    src={`res/news_img/${item.image}`}
+                                    src={`/res/news_img/${item.image}`}
                                     alt={item.title}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                             </div>
 
                             {/* Content */}
-                            <div className="p-6 flex flex-col flex-grow">
+                            <div className="p-6 flex flex-col grow">
                                 {/* Title */}
                                 <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                     {item.title}
                                 </h3>
 
                                 {/* Description - Truncated to 3 lines */}
-                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3 flex-grow">
+                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3 grow">
                                     {item.description}
                                 </p>
 
