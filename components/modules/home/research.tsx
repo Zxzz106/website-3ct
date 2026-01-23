@@ -3,17 +3,17 @@ import Link from "next/link";
 
 export default function Research() {
         return (
-        <section id="research" className="scroll-mt-24 px-4 py-16 flex flex-col">
+        <section id="research" className="scroll-mt-24 px-4 py-12 flex flex-col">
             <div className="flex flex-col items-center">
                 {/* Header */}
                 <div className="mb-10 text-center">
                     <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 dark:text-white">
                         学术经纬
                     </h2>
-                    <div className="mt-4 mx-auto max-w-7xl w-24 border-b-4 border-emerald-500 rounded-full"></div>
+                    <div className="mt-4 mx-auto max-w-[80%] w-24 border-b-4 border-emerald-500 rounded-full"></div>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-6 w-[80%] flex-1">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-6 w-[80%] flex-1">
 
 
                     <div className="flex flex-col h-full group cursor-pointer items-center p-6">

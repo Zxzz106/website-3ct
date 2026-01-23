@@ -6,7 +6,7 @@ export default function Contact() {
     return (
         <section
             id="contact"
-            className="relative scroll-mt-16 overflow-hidden bg-slate-50 dark:bg-black"
+            className="relative scroll-mt-16 overflow-hidden"
         >
             <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 {/* Header */}

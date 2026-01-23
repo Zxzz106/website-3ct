@@ -54,18 +54,18 @@ export default function About() {
     ];
 
     const researchProgress = [
-        "富氧/无焰燃烧与一体化污染物脱除，\n形成氧燃料双分级燃烧与 SCR 优化改造方案。",
-        "煤掺氨燃烧稳定性与低 NOx 控制，\n耦合超细颗粒与喷射策略的无焰燃烧路径。",
-        "固体吸附剂粉体到颗粒成型，建设钙循环\n捕集平台，推进万吨级固体捕集示范。",
-        "燃烧后 CO₂ 吸收剂的构-效关系与反应热数据库，\n相变胺/离子液体体系及再生催化。",
-        "CO₂ 加氢制合成气与甲醇的新型催化剂，\n钙钛矿增强重整与压缩纯化一体化技术。",
-        "高温 CO₂ 吸附强化重整制氢、\n电化学捕集与交能融合的系统评价方法。",
+        "富氧/无焰燃烧与一体化污染物脱除，形成氧燃料双分级燃烧与 SCR 优化改造方案。",
+        "煤掺氨燃烧稳定性与低 NOx 控制，耦合超细颗粒与喷射策略的无焰燃烧路径。",
+        "固体吸附剂粉体到颗粒成型，建设钙循环捕集平台，推进万吨级固体捕集示范。",
+        "燃烧后 CO₂ 吸收剂的构-效关系与反应热数据库，相变胺/离子液体体系及再生催化。",
+        "CO₂ 加氢制合成气与甲醇的新型催化剂，钙钛矿增强重整与压缩纯化一体化技术。",
+        "高温 CO₂ 吸附强化重整制氢、电化学捕集与交能融合的系统评价方法。",
     ];
 
     return (
         <section
             id="about"
-            className="relative scroll-mt-16 overflow-hidden bg-slate-50 dark:bg-black"
+            className="relative scroll-mt-16 overflow-hidden"
         >
             {/* Background Decorations */}
             {/* <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none"> */}
@@ -75,7 +75,7 @@ export default function About() {
                 <div className="absolute left-1/2 top-1/2 h-150 w-150 -translate-x-1/2 -translate-y-1/2 rounded-full border border-slate-200/50 dark:border-white/5" /> */}
             {/* </div> */}
 
-            <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="relative z-10 mx-auto max-w-7xl px-4 pb-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="mb-10 text-center">
                     {/* <span className="inline-block rounded-full bg-emerald-100 px-4 py-1.5 text-sm font-semibold uppercase tracking-wider text-emerald-700 shadow-sm dark:bg-emerald-500/10 dark:text-emerald-300">
@@ -208,7 +208,7 @@ export default function About() {
                 {/* Progress & Future */}
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
                     {/* Research Progress */}
-                    <div className="col-span-1 lg:col-span-2 rounded-3xl bg-slate-50 dark:bg-slate-900/50">
+                    <div className="col-span-1 lg:col-span-2 rounded-3xl bg-slate-50 dark:bg-slate-900/50 h-full p-8 shadow-md hover:shadow-lg">
                         <div className="mb-6 flex items-center gap-3">
                             <i className="fas fa-microscope text-2xl text-emerald-600 dark:text-emerald-400"></i>
                             <h3 className="text-2xl font-bold text-slate-900 dark:text-white">研发进展速览</h3>
@@ -224,7 +224,7 @@ export default function About() {
                     </div>
 
                     {/* Future Work */}
-                    <div className="rounded-3xl bg-linear-to-br from-white to-emerald-50/50 p-8 shadow-xl">
+                    <div className="rounded-3xl bg-linear-to-br from-white to-emerald-50/50 p-8 shadow-md hover:shadow-lg">
                         <div className="mb-6 flex items-center gap-3">
                             <i className="fas fa-rocket text-2xl text-emerald-500"></i>
                             <h3 className="text-2xl font-bold">未来工作</h3>
